@@ -1,4 +1,4 @@
-<?
+<?PHP
 
 /********** FILE UPLOAD FUNCTION ***********/
 function FileUpload($path = "", $dir = "", $uniq = false, $size = "", $types = "",
