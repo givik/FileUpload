@@ -15,7 +15,7 @@ function FileUpload($path = "", $dir = "", $uniq = false, $size = "", $types = "
 		exit("Incorrect First Parameter At Uploading" . "<br>");
 
 	// ARGUMENT INSURANCE
-	if(!is_dir(UPLDIR . $path))
+	if(!is_dir($path))
 		exit("Incorrect Path: <strong>" . trim($path) . "</strong><br>");
 		
 	// ARGUMENT INSURANCE	
@@ -26,7 +26,7 @@ function FileUpload($path = "", $dir = "", $uniq = false, $size = "", $types = "
 	$types = strtolower($types);
 	
 	// MAKE FULL PATH
-	$path = UPLDIR . $path . "/";
+	$path = $path . "/";
 	
 	// ARRAY OF THE FILE FORMATS AND MIME TYPES 
 	$mimeTypes = array(
